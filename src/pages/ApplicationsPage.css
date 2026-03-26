@@ -1,9 +1,4 @@
-/* ── Applications Page ───────────────────────────────── */
 
-/* Reuse shared styles from FavoritesPage.css */
-.applications-page {}
-
-/* List of application cards */
 .app-list {
   display: flex;
   flex-direction: column;
@@ -54,7 +49,7 @@
 /* Info column */
 .app-card-info {
   flex: 1;
-  min-width: 0;         /* prevents overflow on small screens */
+  min-width: 0;        
 }
 
 .app-pet-name {

@@ -1,4 +1,4 @@
-/* Header row (title + button side by side) */
+
 .admin-header {
   display: flex;
   align-items: flex-start;
@@ -154,9 +154,7 @@
   font-size: 0.9rem;
 }
 
-/* ── Pet Management List ── */
 
-/* Filter pills above the list */
 .admin-filter-bar {
   display: flex;
   gap: 8px;
