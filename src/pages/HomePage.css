@@ -1,0 +1,149 @@
+/* ── Hero ────────────────────────────────────────────── */
+
+.hero {
+  background: linear-gradient(135deg, #fff4ef 0%, #ffeee4 100%);
+  border-radius: 24px;
+  padding: 48px 40px;
+  margin-bottom: 32px;
+  border: 1.5px solid #fddbc8;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e86b3a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  letter-spacing: -1px;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: #e86b3a;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ── Search & Filters ── */
+
+.filters {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  background-color: #4b3f3a;
+  border-radius: 20px ;
+  
+}
+
+.search-input {
+  width: 100%;
+  padding: 13px 18px;
+  border: 2px solid #e5e0db;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  border-color: #e86b3a;
+}
+
+.filter-dropdowns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-select {
+  padding: 9px 14px;
+  border: 1.5px solid #e5e0db;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+  border-color: #e86b3a;
+}
+
+.reset-btn {
+  padding: 9px 16px;
+  border: 1.5px solid #fdd9c8;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e86b3a;
+  background: #fff4ef;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reset-btn:hover {
+  background: #ffeee4;
+}
+
+.result-count {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+/* ── Pet Grid ── */
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ── Empty State ── */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0 0 6px;
+}
+
+.empty-state p {
+  font-size: 0.9rem;
+  margin: 0;
+}

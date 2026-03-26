@@ -1,0 +1,52 @@
+
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+  letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+  color: #3a3a3a;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ── Empty State (reused across pages) ── */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #2e2e2e;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+  color: #2b2a2a;
+  margin: 0 0 6px;
+}
+
+.empty-state p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Pet Grid (shared layout used on multiple pages) ── */
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}

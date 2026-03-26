@@ -1,0 +1,208 @@
+/* ── Pet Card ────────────────────────────────────────── */
+
+.pet-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px solid #f0ece8;
+}
+
+.pet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Image ── */
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;       /* fixed height so all cards look uniform */
+  overflow: hidden;
+  background: #f5f2ef;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops the image to fill the box nicely */
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.pet-card:hover .card-image {
+  transform: scale(1.04); /* subtle zoom on hover */
+}
+
+.card-image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* ── Overlays (heart + status badge) ── */
+
+.heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid grey;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.heart-btn:hover {
+  transform: scale(1.15);
+  background: white;
+}
+
+.heart-btn--active {
+  background: white;
+}
+
+.status-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.status-badge--available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge--adopted {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status-badge--pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ── Body ── */
+
+.card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  background-color: #d97ff5;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card-breed {
+  font-size: 0.85rem;
+  color: #242121;
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-meta {
+  display: flex;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+/* Personality tags */
+.card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.card-tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #ffa6a6;
+}
+
+.card-location {
+  font-size: 0.8rem;
+  color: #470303;
+  margin: 0;
+  margin-top: auto;
+}
+
+/* ── Footer ── */
+
+.card-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #f5f2ef;
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Shared Button Styles ── */
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #e86b3a;
+  color: white;
+  flex: 1;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #d4562a;
+}
+
+.btn-danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #fecaca;
+}

@@ -1,0 +1,107 @@
+/* ── Global Reset & Base ─────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #88633e;         /* warm off-white background */
+  color: #1a1a1a;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── App Layout ── */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The main content area, centered with a max width */
+.app-main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ── Footer ── */
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.82rem;
+  color: #bbb;
+  border-top: 1px solid #f0ece8;
+  margin-top: 40px;
+}
+
+/* ── Shared Button Styles (used across many components) ── */
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  font-family: inherit;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #e86b3a;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #d4562a;
+}
+
+.btn-secondary {
+  background: #f5f2ef;
+  color: #555;
+}
+
+.btn-secondary:hover {
+  background: #ede9e5;
+}
+
+.btn-danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #fecaca;
+}
+
+/* ── Scrollbar (optional: nicer scrollbar on desktop) ── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f2ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 6px;
+}
